@@ -119,8 +119,6 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.DealViewHolder
         private void showImage(String url) {
                 Picasso.with(imageDeal.getContext())
                         .load(url)
-                        .resize(160, 160)
-                        .centerCrop()
                         .placeholder(R.drawable.img_placeholder) // can also be a drawable
                         .error(R.drawable.error_placeholder) // will be displayed if the image cannot be loaded
                         .into(imageDeal);
