@@ -25,7 +25,7 @@ public class DealDetailsActivity extends AppCompatActivity {
         }
         setTitle(deal.getTitle());
         txtDescription.setText(deal.getDescription());
-        txtPrice.setText(deal.getPrice());
+        txtPrice.setText(deal.getPrice().replaceAll("\n", " "));
         int width = Resources.getSystem().getDisplayMetrics().widthPixels;
         Picasso.with(this)
                 .load(deal.getImageUrl())
